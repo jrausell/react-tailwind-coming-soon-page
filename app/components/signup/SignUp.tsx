@@ -11,7 +11,7 @@ const SignUp = () => {
         <input
           type="text"
           placeholder="Email"
-          className="w-full h-10 py-6 px-4 bg-transparent z-10"
+          className="w-full h-10 py-6 px-4 bg-transparent z-10 text-gray-700"
         />
         <button
           type="submit"
