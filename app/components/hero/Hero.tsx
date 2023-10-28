@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import SignUp from "../signup/SignUp";
+import ButtonLinkMail from "../signup/ButtonLinkMail";
 
 const Hero = () => {
   return (
@@ -42,7 +43,7 @@ const Hero = () => {
                 </span>
               </div>
               {/* form */}
-              <div className="mt-8">
+              <div className="mt-8 flex flex-col justify-start">
                 <SignUp />
               </div>
             </div>
