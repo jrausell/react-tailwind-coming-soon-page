@@ -14,10 +14,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 dark:text-slate-50
+  // gradients doens't work with transition
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 dark:text-slate-50 transition-colors duration-1000`}
+        className={`${inter.className} from-slate-50 dark:text-slate-50 dark:bg-slate-900 transition-colors duration-1000`}
         suppressHydrationWarning={true}
       >
         {children}

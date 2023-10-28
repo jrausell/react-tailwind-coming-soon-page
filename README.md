@@ -22,9 +22,9 @@ The idea is to keep it simple in options and interface.
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-All illustrations came from www.sss.com and are free of use
+All illustrations came from [uigstudio.com](https://uigstudio.com) and are free of use
 
-All svg icons came from svg.com
+All svg icons came from [svgrepo.com](https://svgrepo.com) and are free of use
 
 This Readme was build using [readme.so](https://readme.so)
 

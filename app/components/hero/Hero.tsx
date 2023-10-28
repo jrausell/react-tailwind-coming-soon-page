@@ -20,14 +20,14 @@ const Hero = () => {
               </span>
             </div>
             {/* */}
-            <div className="mt-4 font-extralight text-2xl">
+            <div className="mt-4 font-extralight text-2xl flex flex-col justify-between">
               <div>Tired of everything being messy?</div>
               <div>
                 Soon you will have a{" "}
                 <span
                   style={{
                     height: "100px" /* Adjust the height as needed */,
-                    background: "linear-gradient(transparent 50%, #2fefec)",
+                    background: "linear-gradient(transparent 50%, #2395b2 50%)",
                   }}
                 >
                   way to organize
@@ -36,20 +36,20 @@ const Hero = () => {
                 <span
                   style={{
                     height: "100px" /* Adjust the height as needed */,
-                    background: "linear-gradient(transparent 50%, #ffe732)",
+                    background: "linear-gradient(transparent 50%, #b5a52d 50%)",
                   }}
                 >
                   where it needs to be
                 </span>
               </div>
               {/* form */}
-              <div className="mt-8 flex flex-col justify-start">
+              <div className=" mt-20 flex flex-col justify-start">
                 <SignUp />
               </div>
             </div>
           </div>
           {/* image */}
-          <div className="absolute bottom-0 right-0 w-1/2 h-[140%] -mb-[10%] flex flex-row justify-end">
+          <div className="absolute bottom-0 right-0 w-1/2 h-[130%] -mb-[5%] flex flex-row justify-end">
             <Image
               src="/images/multitasking.png"
               width={300}
