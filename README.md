@@ -8,7 +8,9 @@ The idea is to keep it simple in options and interface.
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/jrausell/react-tailwind-coming-soon-page/blob/main/assets/screen1.png)
+![App Screenshot](https://github.com/jrausell/react-tailwind-coming-soon-page/blob/main/assets/screen2.png)
+![App Screenshot](https://github.com/jrausell/react-tailwind-coming-soon-page/blob/main/assets/screen3.png)
 
 ## Tech Stack
 
