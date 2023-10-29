@@ -45,3 +45,5 @@ All illustrations came from [uigstudio.com](https://uigstudio.com) and are free 
 All svg icons came from [svgrepo.com](https://svgrepo.com) and are free of use
 
 This Readme was build using [readme.so](https://readme.so)
+
+Used this [BG generator](tailwind-gradient-generator.vercel.app) for the TW gradients.
