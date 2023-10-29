@@ -43,13 +43,13 @@ const Hero = () => {
                 </span>
               </div>
               {/* form */}
-              <div className=" mt-20 flex flex-col justify-start">
+              <div className=" mt-20 flex flex-col justify-start w-4/5">
                 <SignUp />
               </div>
             </div>
           </div>
           {/* image */}
-          <div className="absolute bottom-0 right-0 w-1/2 h-[130%] -mb-[5%] flex flex-row justify-end">
+          <div className="absolute bottom-0 right-0 w-1/2 h-[120%] -mb-[8%] flex flex-row justify-end">
             <Image
               src="/images/multitasking.png"
               width={300}

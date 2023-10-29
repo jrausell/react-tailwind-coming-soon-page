@@ -13,16 +13,28 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState<signError>();
 
+  const defaultCss = {
+    input: {
+      light: "border-white",
+      dark: "border-slate-500",
+    },
+    message: {
+      light: "text-slate-800",
+      dark: "text-slate-100",
+    },
+  };
   const errorCss = {
     input: {
       error: "border-red-500",
       warning: "border-yellow-500",
       info: "border-blue-500",
+      default: "border-transparent",
     },
     message: {
       error: "text-red-500",
       warning: "text-yellow-500",
       info: "text-blue-500",
+      default: "",
     },
   };
 
@@ -32,7 +44,7 @@ const SignUp = () => {
     if (error && error?.level) {
       return errorCss[element][error.level];
     } else {
-      return "";
+      return errorCss[element]?.default ?? "";
     }
   };
 
@@ -53,27 +65,25 @@ const SignUp = () => {
   };
 
   return (
-    <>
-      <div>
-        <form
-          target="#"
-          method="POST"
-          className="relative w-4/5 flex flex-row justify-start items-center rounded-lg bg-gray-100 text-white"
-        >
-          <input
-            type="text"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className={`w-full h-10 py-6 px-4 bg-transparent z-10 text-gray-700 rounded border ${errorClass(
-              "input"
-            )}`}
-          />
-          <ButtonSignUp email={email} setError={handleError} />
-        </form>
-        <ErrorMessage />
-      </div>
-    </>
+    <div className="w-full">
+      <form
+        target="#"
+        method="POST"
+        className="relative w-full flex flex-row justify-start items-center rounded-lg bg-gray-100 text-white dark:bg-slate-500 dark:text-white transition-colors duration-1000"
+      >
+        <input
+          type="text"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className={`w-full h-10 py-6 px-4 bg-transparent z-10 text-gray-700 rounded border ${errorClass(
+            "input"
+          )}`}
+        />
+        <ButtonSignUp email={email} setError={handleError} />
+      </form>
+      <ErrorMessage />
+    </div>
   );
 };
 
