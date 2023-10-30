@@ -19,14 +19,14 @@ export default function Home() {
     } else {
       document.documentElement.classList.remove("dark");
     }
-
-    // // Whenever the user explicitly chooses light mode
-    // localStorage.theme = 'light'
-    // // Whenever the user explicitly chooses dark mode
-    // localStorage.theme = "dark";
-    // // Whenever the user explicitly chooses to respect the OS preference
-    // localStorage.removeItem('theme')
   }, []);
+
+  /**
+   * This is the Home Page
+   * You can choose a multiple pages as show below
+   * Or just one page using one of the templates, or your own
+   *
+   */
 
   return (
     <>
