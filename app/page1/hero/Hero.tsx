@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import SignUp from "../signup/SignUp";
-import ButtonLinkMail from "../signup/ButtonLinkMail";
+import SignUp from "../../components/signup/SignUp";
+import ButtonLinkMail from "../../components/signup/ButtonLinkMail";
 
 const Hero = () => {
   return (

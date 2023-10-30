@@ -1,11 +1,17 @@
 "use client";
 import { useEffect } from "react";
 import Footer from "../components/footer/Footer";
-import Hero from "../components/hero/Hero";
+import Hero from "./hero/Hero";
 import NavMenu from "../components/navmenu/NavMenu";
 import ButtonLinkMail from "../components/signup/ButtonLinkMail";
 
-export default function Home() {
+export default function Page1({
+  showNavMenu = true,
+  showFooter = true,
+}: {
+  showNavMenu: boolean;
+  showFooter: boolean;
+}) {
   useEffect(() => {
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (
@@ -30,13 +36,13 @@ export default function Home() {
     <>
       <main className="h-screen min-h-fit">
         {/* NavTop */}
-        <NavMenu />
+        {showNavMenu && <NavMenu />}
 
         {/* Hero */}
         <Hero />
 
         {/* Footer */}
-        <Footer />
+        {showFooter && <Footer />}
       </main>
     </>
   );

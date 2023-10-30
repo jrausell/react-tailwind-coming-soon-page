@@ -1,14 +1,20 @@
 "use client";
 import { useEffect } from "react";
 import Footer from "../components/footer/Footer";
-import Hero from "../components/hero/Hero";
+import Hero from "../page1/hero/Hero";
 import NavMenu from "../components/navmenu/NavMenu";
 import ButtonLinkMail from "../components/signup/ButtonLinkMail";
 import SignUp from "../components/signup/SignUp";
 import Image from "next/image";
 import PageLinks from "../components/navmenu/PageLinks";
 
-export default function Home() {
+export default function Page2({
+  showNavMenu = true,
+  showFooter = true,
+}: {
+  showNavMenu: boolean;
+  showFooter: boolean;
+}) {
   useEffect(() => {
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (
@@ -38,6 +44,11 @@ export default function Home() {
             id="main"
             className="w-3/5 xl:w-3/6 m-auto pl-12 pr-6 flex flex-col h-full justify-between"
           >
+            {showNavMenu && (
+              <div className="flex flex-row text-sm gap-4 self-center text-slate-500 dark:text-slate-400">
+                <PageLinks />
+              </div>
+            )}
             <div className="flex flex-row text-sm gap-4 self-center text-slate-500 dark:text-slate-400">
               <PageLinks />
             </div>
@@ -99,7 +110,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <Footer />
+        {showFooter && <Footer />}
       </main>
     </>
   );

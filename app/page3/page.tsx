@@ -1,14 +1,20 @@
 "use client";
 import { useEffect } from "react";
 import Footer from "../components/footer/Footer";
-import Hero from "../components/hero/Hero";
+import Hero from "../page1/hero/Hero";
 import NavMenu from "../components/navmenu/NavMenu";
 import ButtonLinkMail from "../components/signup/ButtonLinkMail";
 import Image from "next/image";
 import PageLinks from "../components/navmenu/PageLinks";
 import SignUp from "../components/signup/SignUp";
 
-export default function Home() {
+export default function Page3({
+  showNavMenu = true,
+  showFooter = true,
+}: {
+  showNavMenu: boolean;
+  showFooter: boolean;
+}) {
   useEffect(() => {
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (
@@ -33,9 +39,11 @@ export default function Home() {
     <>
       <main className="h-screen min-h-fit">
         <div className="w-full h-full flex flex-col justify-center items-center bg-slate-200 dark:bg-slate-900 dark:text-slate-50 transition-colors duration-1000">
-          <div className="flex flex-row text-sm gap-4 text-slate-500 dark:text-slate-400">
-            <PageLinks />
-          </div>
+          {showNavMenu && (
+            <div className="flex flex-row text-sm gap-4 text-slate-500 dark:text-slate-400">
+              <PageLinks />
+            </div>
+          )}
 
           {/* main */}
           <div
@@ -45,7 +53,7 @@ export default function Home() {
             <div className="grow flex flex-col justify-center">
               <div className="w-full">
                 <div className="flex flex-col justify-center items-center">
-                  <h1 className="relative text-6xl font-black bg-gradient-to-br from-blue-400 via-purple-500 to-rose-500 dark:from-cyan-400 dark:via-purple-300 dark:to-fuchsia-700 text-transparent bg-clip-text">
+                  <h1 className="relative text-6xl font-black bg-gradient-to-br from-blue-400 via-purple-500 to-rose-500 dark:from-cyan-400 dark:via-purple-300 dark:to-fuchsia-700 text-transparent bg-clip-text transition-colors duration-1000">
                     <span className=" text-purple-700 dark:text-blue-300">
                       Y
                     </span>
@@ -62,7 +70,7 @@ export default function Home() {
                 </div>
                 {/* */}
                 <div className="mt-4 font-extralight text-2xl flex flex-col justify-between items-center text-center">
-                  <div className=" leading-8 space-y-6">
+                  <div className=" leading-8 space-y-6 transition-colors duration-500">
                     <p>
                       A simple page with a minimalist design. A form to
                       subscribe and receive news about your SaaS.
@@ -84,7 +92,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <Footer />
+        {showFooter && <Footer />}
       </main>
     </>
   );

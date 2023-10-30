@@ -1,9 +1,9 @@
 "use client";
 import { useEffect } from "react";
 import Footer from "./components/footer/Footer";
-import Hero from "./components/hero/Hero";
-import NavMenu from "./components/navmenu/NavMenu";
-import ButtonLinkMail from "./components/signup/ButtonLinkMail";
+import Page1 from "./page1/page";
+import Page2 from "./page2/page";
+import Page3 from "./page3/page";
 
 export default function Home() {
   useEffect(() => {
@@ -28,15 +28,15 @@ export default function Home() {
 
   return (
     <>
-      <main className="h-screen min-h-fit">
-        {/* NavTop */}
-        <NavMenu />
+      <main className="f-fit min-h-screen">
+        {/* Page1 */}
+        <Page1 showNavMenu={true} showFooter={false} />
 
-        {/* Hero */}
-        <Hero />
+        {/* Page2 */}
+        <Page2 showNavMenu={false} showFooter={false} />
 
-        {/* Footer */}
-        <Footer />
+        {/* Page3 */}
+        <Page3 showNavMenu={false} showFooter={true} />
       </main>
     </>
   );
